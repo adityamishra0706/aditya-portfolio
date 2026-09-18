@@ -33,10 +33,10 @@ public/
 ├── images/
 │   └── aditya.jpg               ← Your About portrait
 └── videos/
-    ├── hero-background.mp4      ← Full-screen background hero video
-    ├── coke-ad.mp4              ← Coke spec ad video
-    ├── curls-ad.mp4             ← Curls ₹10K phone ad video
-    ├── fashion-reel-01.mp4      ← Fashion Reel 01 video
+    ├── hero/hero-main.mp4       ← Full-screen background hero video
+    ├── work/coke-ad.mp4         ← Coke spec ad video
+    ├── work/curls-ad.mp4        ← Curls ₹10K phone ad video
+    ├── work/fashion-reel-01.mp4 ← Fashion Reel 01 video
     ├── gods-plan.mp4            ← POV experiment video
     └── pov-aditya.mp4           ← POV identity video
 ```
@@ -46,10 +46,10 @@ public/
 ### 2. How to Replace the Hero Video
 
 1. Export your hero video in MP4 (H.264 format).
-2. Rename the file to: `hero-background.mp4`
+2. Rename the file to: `hero-main.mp4`
 3. Save or copy it into:
    ```
-   public/videos/hero-background.mp4
+   public/videos/hero/hero-main.mp4
    ```
 4. Refresh your browser. The hero video will play automatically.
 
@@ -57,10 +57,10 @@ public/
 
 ### 3. How to Replace Work Videos
 
-1. Save your MP4 file in `public/videos/`:
-   - Coke ad: `public/videos/coke-ad.mp4`
-   - Curls phone ad: `public/videos/curls-ad.mp4`
-   - Fashion reel 01: `public/videos/fashion-reel-01.mp4`
+1. Save your MP4 file in the matching `public/videos/` subdirectory:
+   - Coke ad: `public/videos/work/coke-ad.mp4`
+   - Curls phone ad: `public/videos/work/curls-ad.mp4`
+   - Fashion reel 01: `public/videos/work/fashion-reel-01.mp4`
 2. If you want to use a different filename, open `src/data/portfolio.js`, find the project in `selectedWork`, and update its `video` path:
    ```javascript
    video: "/videos/my-custom-video.mp4"

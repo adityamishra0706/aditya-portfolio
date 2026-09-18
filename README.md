@@ -40,10 +40,10 @@ aditya-portfolio/
 │   ├── images/
 │   │   └── aditya.jpg              # Place your About portrait photo here
 │   └── videos/
-│       ├── hero-background.mp4     # Full-screen background hero video
-│       ├── coke-ad.mp4             # Coke spec commercial video
-│       ├── curls-ad.mp4            # Curls ₹10K Android phone commercial video
-│       ├── fashion-reel-01.mp4     # Fashion Reel 01 video
+│       ├── hero/hero-main.mp4      # Full-screen background hero video
+│       ├── work/coke-ad.mp4        # Coke spec commercial video
+│       ├── work/curls-ad.mp4       # Curls ₹10K Android phone commercial video
+│       ├── work/fashion-reel-01.mp4 # Fashion Reel 01 video
 │       ├── gods-plan.mp4           # POV visual experiment video
 │       ├── pov-aditya.mp4          # POV process & identity video
 │       └── fashion-reel-02.mp4     # Optional future second reel
@@ -155,10 +155,10 @@ Drop your files directly into `public/`:
 
 | Asset | Target Location |
 |---|---|
-| **Hero Background Video** | `public/videos/hero-background.mp4` |
-| **Coke Ad Video** | `public/videos/coke-ad.mp4` |
-| **Curls Phone Ad Video** | `public/videos/curls-ad.mp4` |
-| **Fashion Reel 01 Video** | `public/videos/fashion-reel-01.mp4` |
+| **Hero Background Video** | `public/videos/hero/hero-main.mp4` |
+| **Coke Ad Video** | `public/videos/work/coke-ad.mp4` |
+| **Curls Phone Ad Video** | `public/videos/work/curls-ad.mp4` |
+| **Fashion Reel 01 Video** | `public/videos/work/fashion-reel-01.mp4` |
 | **POV Visual Experiment** | `public/videos/gods-plan.mp4` |
 | **POV Identity Video** | `public/videos/pov-aditya.mp4` |
 | **About Portrait Photo** | `public/images/aditya.jpg` |

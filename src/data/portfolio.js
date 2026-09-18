@@ -31,7 +31,7 @@ export const portfolio = {
     identityBadge: "@POV.ADITYA",
     ctaLabel: "WATCH MY WORK",
     ctaTarget: "#work",
-    video: "/videos/hero-background.mp4"
+    video: "/videos/hero/hero-main.mp4"
   },
 
   // Marquee Strip
