@@ -1,1 +1,8 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# Active Vercel media is committed as regular Git files so Vite can copy it
+# directly from public/ during production builds.
+public/videos/hero/hero-main.mp4 -filter -diff -merge -text
+public/videos/work/coke-ad.mp4 -filter -diff -merge -text
+public/videos/work/curls-ad.mp4 -filter -diff -merge -text
+public/videos/work/fashion-reel-01.mp4 -filter -diff -merge -text
