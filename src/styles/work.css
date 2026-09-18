@@ -1,0 +1,190 @@
+/* Selected Work Section — Editorial, Media-First */
+.work-section {
+  position: relative;
+  background-color: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+.work-header-row {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.work-editorial-stream {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+/* 01 — Feature Entry: Coke Ad (Dominant Widescreen) */
+.work-feature-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.work-feature-media {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color var(--transition-smooth);
+}
+
+.work-feature-media:hover {
+  border-color: var(--border-strong);
+}
+
+.work-feature-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.work-meta-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.work-badge-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.work-badge-dot {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+.work-text-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.work-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.work-title-display {
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+}
+
+.work-body-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+/* Standalone Vertical Wrap for Fashion Reel */
+.work-vertical-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.work-vertical-wrap .work-vertical-entry {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Vertical Reels Grid */
+.work-verticals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: flex-start;
+}
+
+.work-vertical-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.vertical-header-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.vertical-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+
+.curls-creative-hook {
+  font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.fashion-creative-hook {
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.vertical-media-frame {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color var(--transition-smooth);
+}
+
+.vertical-media-frame:hover {
+  border-color: var(--border-strong);
+}
+
+.vertical-bottom-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.vertical-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Responsiveness */
+@media (max-width: 860px) {
+  .work-text-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .work-verticals-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

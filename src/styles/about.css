@@ -1,0 +1,141 @@
+/* About Section — Editorial Magazine Layout */
+.about-section {
+  position: relative;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+/* Portrait Wrap (Rectangular, large editorial presence) */
+.about-portrait-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.about-portrait-frame {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color var(--transition-smooth);
+}
+
+.about-portrait-frame:hover {
+  border-color: var(--border-strong);
+}
+
+.about-badge-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.about-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+/* Narrative Wrap */
+.about-narrative-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-display-title {
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+
+.about-text-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-narrative-p {
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Connections Strip */
+.about-connections-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  max-width: 460px;
+}
+
+.about-connect-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.about-connect-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.connect-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.connect-val {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.connect-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.about-connect-link:hover .connect-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsiveness */
+@media (max-width: 860px) {
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-portrait-wrap {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}

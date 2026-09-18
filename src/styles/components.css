@@ -1,0 +1,233 @@
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Video Player Container */
+.video-player-container {
+  position: relative;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.aspect-9-16 {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.hero-video-mode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: none;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.video-element.loaded {
+  opacity: 1;
+}
+
+/* Editorial Video Fallback */
+.video-fallback-editorial {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.fallback-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.fallback-live-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.fallback-media-title {
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.fallback-target-box {
+  margin-top: 0.25rem;
+}
+
+.fallback-target-box code {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--border-subtle);
+  border: 1px dashed var(--border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Video status indicator */
+.video-status-indicator {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #888;
+}
+
+.status-dot.playing {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+/* Editorial Image */
+.editorial-image-wrapper {
+  position: relative;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editorial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.editorial-img.loaded {
+  opacity: 1;
+}
+
+.image-fallback-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--bg-card);
+}
+
+.image-fallback-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.image-fallback-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.portrait-monogram {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.fallback-path-hint {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--border-subtle);
+  border: 1px dashed var(--border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}

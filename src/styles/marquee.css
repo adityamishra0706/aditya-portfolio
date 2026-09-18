@@ -1,0 +1,62 @@
+/* Marquee Moving Typography Section */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+  user-select: none;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.marquee-text {
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.marquee-text:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.marquee-dot {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
