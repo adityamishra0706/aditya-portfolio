@@ -15,7 +15,22 @@
   gap: clamp(3.5rem, 6vw, 5.5rem);
 }
 
-/* 01 — Feature Entry: Coke Ad (Dominant Widescreen) */
+/* Clickable Work Card Link wrapper */
+.work-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.work-card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+
+/* 01 & 02 — Feature Entries (Landscape 16:9) */
 .work-feature-entry {
   display: flex;
   flex-direction: column;
@@ -32,7 +47,8 @@
   transition: border-color var(--transition-smooth);
 }
 
-.work-feature-media:hover {
+.work-card-link:hover .work-feature-media,
+.work-card-link:hover .vertical-media-frame {
   border-color: var(--border-strong);
 }
 
@@ -82,6 +98,17 @@
   line-height: 0.95;
   letter-spacing: 0.03em;
   color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.work-card-link:hover .work-title-display,
+.work-card-link:hover .vertical-title {
+  color: #ffffff;
+}
+
+[data-theme="light"] .work-card-link:hover .work-title-display,
+[data-theme="light"] .work-card-link:hover .vertical-title {
+  color: #000000;
 }
 
 .work-body-desc {
@@ -91,19 +118,7 @@
   max-width: 580px;
 }
 
-/* Standalone Vertical Wrap for Fashion Reel */
-.work-vertical-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.work-vertical-wrap .work-vertical-entry {
-  width: 100%;
-  max-width: 520px;
-}
-
-/* Vertical Reels Grid */
+/* Vertical Reels Grid (03 — FASHION REEL 01 & 04 — FASHION REEL 2) */
 .work-verticals-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -131,6 +146,7 @@
   letter-spacing: 0.03em;
   color: var(--text-primary);
   margin-top: 0.25rem;
+  transition: color var(--transition-fast);
 }
 
 .curls-creative-hook {
@@ -160,10 +176,6 @@
   transition: border-color var(--transition-smooth);
 }
 
-.vertical-media-frame:hover {
-  border-color: var(--border-strong);
-}
-
 .vertical-bottom-meta {
   display: flex;
   flex-direction: column;
@@ -174,6 +186,109 @@
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.55;
+}
+
+/* Static Work Thumbnail Component Styles */
+.work-thumbnail-container {
+  position: relative;
+  width: 100%;
+  background: var(--bg-card);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform var(--transition-smooth);
+  will-change: transform;
+}
+
+.work-thumbnail-img.loaded {
+  opacity: 1;
+}
+
+.work-card-link:hover .work-thumbnail-img {
+  transform: scale(1.025);
+}
+
+/* Subtle External Destination Cue (↗) */
+.work-external-hint {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(7, 7, 7, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--badge-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.work-external-hint .hint-arrow {
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: transform var(--transition-fast);
+}
+
+.work-card-link:hover .work-external-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-card-link:hover .work-external-hint .hint-arrow {
+  transform: translate(1px, -1px);
+  color: var(--accent);
+}
+
+/* Clean Editorial Fallback for Media */
+.work-thumbnail-fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--bg-card);
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.fallback-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.fallback-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1;
 }
 
 /* Responsiveness */

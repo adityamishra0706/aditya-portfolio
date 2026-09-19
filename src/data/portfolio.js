@@ -10,7 +10,7 @@ export const portfolio = {
   // Identity & Navigation
   name: "Aditya Mishra",
   navBrand: "ADITYA.",
-  role: "CSE STUDENT / VIDEO EDITOR / CREATOR",
+  role: "CONTENT CREATOR / VIDEO EDITOR / CSE STUDENT",
   identity: "@POV.ADITYA",
 
   // Social Links (Real external destinations)
@@ -27,7 +27,7 @@ export const portfolio = {
   hero: {
     firstName: "ADITYA",
     lastName: "MISHRA",
-    tagline: "CSE STUDENT / VIDEO EDITOR / CREATOR",
+    tagline: "CONTENT CREATOR / VIDEO EDITOR / CSE STUDENT",
     identityBadge: "@POV.ADITYA",
     ctaLabel: "WATCH MY WORK",
     ctaTarget: "#work",
@@ -86,7 +86,10 @@ export const portfolio = {
       focusTags: ["01 / COMMERCIAL", "EDITED"],
       tagline: "Commercial visual pacing & kinetic sound design",
       description: "A spec commercial cut exploring high-impact pacing, precise sound design, and commercial visual framing.",
-      video: "/videos/work/coke-ad.mp4",
+      thumbnail: "/images/work/coke-ad.png",
+      videoUrl: "/videos/work/coke-ad.mp4",
+      externalUrl: "https://www.instagram.com/reel/DcqFrheSBtZ/",
+      alt: "Coke Ad — @POV.ADITYA",
       aspectRatio: "16/9",
       featured: true
     },
@@ -99,7 +102,10 @@ export const portfolio = {
       label: "SHOT + EDITED",
       category: "COMMERCIAL EXPERIMENT",
       description: "Can a commercial-style piece be made using a ₹10K Android phone? An experiment in pushing budget gear to its creative limits through intentional lighting, disciplined movement, and post-production color science.",
-      video: "/videos/work/curls-ad.mp4",
+      thumbnail: "/images/work/curls-ad.png",
+      videoUrl: "/videos/work/curls-ad.mp4",
+      externalUrl: "https://www.instagram.com/reel/Dc79z8wuduf/",
+      alt: "Curls Ad — @POV.ADITYA",
       aspectRatio: "16/9",
       featured: true
     },
@@ -111,7 +117,25 @@ export const portfolio = {
       label: "SHOT + EDITED",
       category: "SHORT-FORM CONTENT",
       description: "Shot and edited for college society. High-energy rhythm, fluid cuts, color grading, and dynamic visual transitions.",
-      video: "/videos/work/fashion-reel-01.mp4",
+      thumbnail: "/images/work/fashion-reel-01.png",
+      videoUrl: "/videos/work/fashion-reel-01.mp4",
+      externalUrl: "https://www.instagram.com/reel/DdJhmZkzHfZ/",
+      alt: "Fashion Reel 01 — @POV.ADITYA",
+      aspectRatio: "9/16",
+      featured: false
+    },
+    {
+      id: "fashion-reel-02",
+      number: "04",
+      badge: "04 / REEL",
+      title: "FASHION REEL 02",
+      label: "SHOT + EDITED",
+      category: "SHORT-FORM CONTENT",
+      description: "Second installment exploring rhythm, grading, and fashion storytelling.",
+      thumbnail: "/images/work/fashion-reel-02.png",
+      videoUrl: "",
+      externalUrl: "https://www.instagram.com/reel/DdeA9tgAA4S/",
+      alt: "Fashion Reel 02 — @POV.ADITYA",
       aspectRatio: "9/16",
       featured: false
     }

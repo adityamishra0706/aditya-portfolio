@@ -10,9 +10,9 @@ All your content is controlled from **one central file**:
 ## Table of Contents
 1. [Where to Put Videos & Photos](#1-where-to-put-videos--photos)
 2. [How to Replace the Hero Video](#2-how-to-replace-the-hero-video)
-3. [How to Replace Work Videos (Coke, Curls, Fashion Reel)](#3-how-to-replace-work-videos)
+3. [How to Update Work Thumbnails & External Video Links](#3-how-to-update-work-thumbnails--external-video-links)
 4. [How to Replace the About Portrait Photo](#4-how-to-replace-the-about-portrait-photo)
-5. [How to Add a Second Fashion Reel (Fashion Reel 02)](#5-how-to-add-a-second-fashion-reel)
+5. [How to Update Fashion Reel 2 (Thumbnail & External Destination)](#5-how-to-update-fashion-reel-2-thumbnail--external-destination)
 6. [How to Add Another Project](#6-how-to-add-another-project)
 7. [How to Edit Project Titles, Hooks, and Descriptions](#7-how-to-edit-project-titles-hooks-and-descriptions)
 8. [How to Edit About Text (Engineering × Creativity)](#8-how-to-edit-about-text)
@@ -31,14 +31,14 @@ All media belongs directly in the `public/` directory:
 ```
 public/
 ├── images/
-│   └── aditya.jpg               ← Your About portrait
+│   ├── aditya.jpg               ← Your About portrait
+│   └── work/                    ← Static project thumbnails
+│       ├── coke-ad.png          ← Coke spec ad thumbnail
+│       ├── curls-ad.png         ← Curls phone ad thumbnail
+│       ├── fashion-reel-01.png  ← Fashion Reel 01 thumbnail
+│       └── fashion-reel-02.png  ← Fashion Reel 02 thumbnail
 └── videos/
-    ├── hero/hero-main.mp4       ← Full-screen background hero video
-    ├── work/coke-ad.mp4         ← Coke spec ad video
-    ├── work/curls-ad.mp4        ← Curls ₹10K phone ad video
-    ├── work/fashion-reel-01.mp4 ← Fashion Reel 01 video
-    ├── gods-plan.mp4            ← POV experiment video
-    └── pov-aditya.mp4           ← POV identity video
+    └── hero/hero-main.mp4       ← Full-screen background hero video
 ```
 
 ---
@@ -55,15 +55,16 @@ public/
 
 ---
 
-### 3. How to Replace Work Videos
+### 3. How to Update Work Thumbnails & External Video Links
 
-1. Save your MP4 file in the matching `public/videos/` subdirectory:
-   - Coke ad: `public/videos/work/coke-ad.mp4`
-   - Curls phone ad: `public/videos/work/curls-ad.mp4`
-   - Fashion reel 01: `public/videos/work/fashion-reel-01.mp4`
-2. If you want to use a different filename, open `src/data/portfolio.js`, find the project in `selectedWork`, and update its `video` path:
+The WORK section uses static thumbnail images that link out to external destinations (Instagram Reels) where visitors can watch your edits in full quality with audio.
+
+1. Save your poster image (PNG or JPG) into:
+   `public/images/work/`
+2. Open `src/data/portfolio.js`, find the project inside `selectedWork`, and update `thumbnail` and `externalUrl`:
    ```javascript
-   video: "/videos/my-custom-video.mp4"
+   thumbnail: "/images/work/coke-ad.png",
+   externalUrl: "https://www.instagram.com/reel/DcqFrheSBtZ/"
    ```
 
 ---
@@ -80,15 +81,15 @@ public/
 
 ---
 
-### 5. How to Add a Second Fashion Reel
+### 5. How to Update Fashion Reel 02 (Thumbnail & External Destination)
 
-When your second fashion reel is ready:
-1. Save the video to:
+Fashion Reel 02 is active in your portfolio as Project `04` in the vertical reels grid!
+
+1. Save your vertical poster image into:
    ```
-   public/videos/fashion-reel-02.mp4
+   public/images/work/fashion-reel-02.png
    ```
-2. Open `src/data/portfolio.js`.
-3. In `selectedWork`, add the following object:
+2. In `src/data/portfolio.js`:
    ```javascript
    {
      id: "fashion-reel-02",
@@ -98,18 +99,20 @@ When your second fashion reel is ready:
      label: "SHOT + EDITED",
      category: "SHORT-FORM CONTENT",
      description: "Second installment exploring rhythm, grading, and fashion storytelling.",
-     video: "/videos/fashion-reel-02.mp4",
+     thumbnail: "/images/work/fashion-reel-02.png",
+     externalUrl: "https://www.instagram.com/reel/DdeA9tgAA4S/",
+     alt: "Fashion Reel 02 — @POV.ADITYA",
      aspectRatio: "9/16",
      featured: false
    }
    ```
-4. Save the file. The new reel automatically renders in the layout!
+3. Save the file. The thumbnail renders, and clicking it opens the Instagram Reel in a new tab!
 
 ---
 
 ### 6. How to Add Another Project
 
-1. Copy your video into `public/videos/my-new-project.mp4`.
+1. Copy your thumbnail image into `public/images/work/my-new-project.jpg`.
 2. Open `src/data/portfolio.js`.
 3. In `selectedWork`, add a new project block:
    ```javascript
@@ -120,7 +123,8 @@ When your second fashion reel is ready:
      title: "PROJECT TITLE",
      category: "COMMERCIAL / EXPERIMENTAL",
      description: "Brief concept summary of what you shot and edited.",
-     video: "/videos/my-new-project.mp4",
+     thumbnail: "/images/work/my-new-project.jpg",
+     externalUrl: "https://youtube.com/...",
      aspectRatio: "16/9", // use "16/9" for landscape or "9/16" for vertical reel
      featured: false
    }

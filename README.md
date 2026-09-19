@@ -38,19 +38,19 @@ aditya-portfolio/
 ├── public/
 │   ├── favicon.svg                 # Website favicon
 │   ├── images/
-│   │   └── aditya.jpg              # Place your About portrait photo here
+│   │   ├── aditya.jpg              # Place your About portrait photo here
+│   │   └── work/                   # Static project poster thumbnails
+│   │       ├── coke-ad.png         # Coke spec commercial thumbnail
+│   │       ├── curls-ad.png        # Curls ₹10K phone ad thumbnail
+│   │       ├── fashion-reel-01.png # Fashion Reel 01 thumbnail
+│   │       └── fashion-reel-02.png # Fashion Reel 02 thumbnail
 │   └── videos/
-│       ├── hero/hero-main.mp4      # Full-screen background hero video
-│       ├── work/coke-ad.mp4        # Coke spec commercial video
-│       ├── work/curls-ad.mp4       # Curls ₹10K Android phone commercial video
-│       ├── work/fashion-reel-01.mp4 # Fashion Reel 01 video
-│       ├── gods-plan.mp4           # POV visual experiment video
-│       ├── pov-aditya.mp4          # POV process & identity video
-│       └── fashion-reel-02.mp4     # Optional future second reel
+│       └── hero/hero-main.mp4      # Full-screen background hero video
 │
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx              # Fixed minimal header with smooth scroll & theme toggle
+│   │   ├── WorkThumbnail.jsx       # Static project thumbnail component with external link cues
 │   │   ├── VideoPlayer.jsx         # Resilient player with autoplay & missing-media fallback
 │   │   ├── EditorialImage.jsx      # Image component with elegant fallback
 │   │   ├── ThemeToggle.jsx         # Dark/Light mode switcher with persistence
